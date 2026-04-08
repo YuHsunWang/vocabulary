@@ -1,0 +1,24 @@
+{
+  "short_name": "TOEIC Master",
+  "name": "TOEIC Master AI 單字機",
+  "description": "利用 AI 技術高效背誦多益核心單字，支援語音朗讀與離線使用。",
+  "icons": [
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#07090F",
+  "background_color": "#07090F"
+}

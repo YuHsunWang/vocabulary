@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>TOEIC Master AI</title>
+    
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#07090F">
+    
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="TOEIC Master">
+    <link rel="apple-touch-icon" href="/logo192.png">
+
+    <style>
+        body {
+            margin: 0;
+            background-color: #07090F; /* 防止載入前白屏 */
+            -webkit-tap-highlight-color: transparent; /* 移除手機點擊陰影 */
+            overflow-x: hidden;
+        }
+        #root {
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <noscript>你需要啟用 JavaScript 才能執行此應用程式。</noscript>
+    
+    <div id="root"></div>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js')
+                    .then(registration => {
+                        console.log('Service Worker 註冊成功，範圍：', registration.scope);
+                    })
+                    .catch(error => {
+                        console.log('Service Worker 註冊失敗：', error);
+                    });
+            });
+        }
+    </script>
+</body>
+</html>
